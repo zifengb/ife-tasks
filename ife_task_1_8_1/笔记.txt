@@ -1,4 +1,4 @@
-Window 尺寸
+1.Window 尺寸
 
 有三种方法能够确定浏览器窗口的尺寸（浏览器的视口，不包括工具栏和滚动条）。
 
@@ -26,3 +26,27 @@ var w=window.innerWidth
 var h=window.innerHeight
 || document.documentElement.clientHeight
 || document.body.clientHeight;
+
+
+
+2.calc()的运算规则
+
+calc()使用通用的数学运算规则，但是也提供更智能的功能：
+
+使用“+”、“-”、“*” 和 “/”四则运算；
+可以使用百分比、px、em、rem等单位；
+可以混合使用各种单位进行计算；
+表达式中有“+”和“-”时，其前后必须要有空格，如"widht: calc(12%+5em)"这种没有空格的写法是错误的；
+表达式中有“*”和“/”时，其前后可以没有空格，但建议留有空格
+
+
+
+3.借鉴bootstrap的写法：
+
+使用媒体查询分辨大屏（>=1200）/中屏(>=992)/小屏(>=768)/超小屏(<=768)：
+各种屏的宽度设置应该分开写样式，否则会产生颜色覆盖的问题。
+
+
+
+4.border和outline的区别：
+border占据空间，而outline不占据。
