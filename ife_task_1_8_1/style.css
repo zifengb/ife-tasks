@@ -1,0 +1,103 @@
+.container{
+	width: 100%;
+}
+.row{
+	*zoom:1;
+}
+.row:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.row>div{
+	float: left;
+	height: 50px;
+	background-color: #eee;
+	border: 1px solid #999;
+	margin-bottom: 10px;
+}
+.row>div{
+	margin-right: 20px;
+}
+.row>div:last-child{
+	/*最后一个div元素设置margin-right:0*/
+	margin-right: 0;
+}
+/*大屏*/
+@media (min-width: 1200px){
+	.col-lg-1{
+		width: 8%;
+	}
+	.col-lg-2{
+		width: 16%;
+	}
+	.col-lg-3{
+		width: 25.5%;
+	}
+	.col-lg-4{
+		width: 32%;
+	}
+	.col-lg-5{
+		width: 40%
+	}
+	.col-lg-6{
+		width: 45.2%;
+	}
+	.col-lg-7{
+		width: 56%
+	}
+	.col-lg-8{
+		width: 64%
+	}
+	.col-lg-9{
+		width: 72%;
+	}
+	.col-lg-10{
+		width: 80%
+	}
+	.col-lg-11{
+		width: 88%;
+	}
+	.col-lg-12{
+		width: 96%;
+	}
+}
+/*中屏*/
+@media (max-width: 768px){
+	.col-md-1{
+		width: 7.75%;
+	}
+	.col-md-2{
+		width: 15.5%;
+	}
+	.col-md-3{
+		width: 23.25%;
+	}
+	.col-md-4{
+		width: 31%;
+	}
+	.col-md-5{
+		width: 38.75%
+	}
+	.col-md-6{
+		width: 46.5%;
+	}
+	.col-md-7{
+		width: 54.25%
+	}
+	.col-md-8{
+		width: 59.6%
+	}
+	.col-md-9{
+		width: 69.75%;
+	}
+	.col-md-10{
+		width: 77.5%
+	}
+	.col-md-11{
+		width: 85.25%;
+	}
+	.col-md-12{
+		width: 96%;
+	}
+}
