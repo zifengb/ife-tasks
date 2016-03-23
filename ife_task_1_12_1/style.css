@@ -1,0 +1,212 @@
+table{
+	border: 1px solid #fff;
+	font-weight: bold;
+}
+table>thead>tr>th{
+	background-color: black;
+	color: #fff;
+}
+/*:nth-child()索引从1开始*/
+tbody>tr:nth-child(odd){
+	/*基数项*/
+	background-color: #FFFFFD;
+}
+tbody>tr:nth-child(even){
+	/*偶数项*/
+	background-color: #CDCDCD;
+}
+tbody>tr:first-child,
+tbody>tr:nth-of-type(2),
+tbody>tr:nth-last-of-type(8){
+	color: #c00;
+}
+
+input[type=text]{
+	width: 100px;
+	/*过渡，可以用作动画的过渡*/
+	-webkit-transition: width 1s ease-in-out;
+	-o-transition: width 1s ease-in-out;
+	transition: width 1s ease-in-out;
+}
+input[type=text]:focus{
+	width: 250px;
+}
+
+.tabs-group{
+	position: relative;
+	width: 300px;
+	height: 300px;
+	overflow: hidden;
+	outline: 1px solid #c00;
+}
+ul,li{
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+.clearfix{
+	*zoom: 1;
+}
+.clearfix:after{
+	content: "";
+	display: table;
+	clear: both;
+}
+.tab-panel{
+	width: 1200px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	/*-webkit-animation: roll 9s ease-in-out infinite;
+	-o-animation: roll 9s ease-in-out infinite;
+	animation: roll 9s ease-in-out infinite;
+	-webkit-transition: left 0.4 onclick="return false;"s ease-in-out;
+	-o-transition: left 0.4 onclick="return false;"s ease-in-out;
+	transition: left 0.4 onclick="return false;"s ease-in-out;*/
+}
+.tab-panel:hover,
+a[target^="##ta"b]:hover~ul.tab-panel/*,
+#tab1:target~ul.tab-panel,
+#tab2:target~ul.tab-panel,
+#tab3:target~ul.tab-panel*/{
+	-webkit-animation-play-state: paused;
+	-moz-animation-play-state: paused;
+	-o-animation-play-state: paused;
+	animation-play-state: paused;
+}
+.tab-panel>li{
+	float: left;
+	width: 300px;
+	height: 300px;
+	font-size: 2em;
+	color: #fff;
+}
+.tab-panel>li:first-child,
+.tab-panel>li:last-child{
+	background-color: green;
+}
+.tab-panel>li:nth-child(2){
+	background-color: blue;
+}
+.tab-panel>li:nth-child(3){
+	background-color: red;
+}
+
+/*.btn{
+	position: absolute;
+	bottom: 4px;
+	right: 4px;
+}
+.btn>li{
+	float: left;
+}
+.btn>li>a{
+	display: inline-block;
+	padding: 8px;
+	margin-left: 4px;
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+	background-color: #7FC07E;
+	alpha:(opacity:80);
+	opacity: 0.8;
+}*/
+
+/*定义动画*/
+/*@-webkit-keyframes roll{
+	0% {
+		left: 0px;
+	}
+	25% {
+		left: -300px;
+	}
+	75%{
+		left: -600px;
+	}
+	100%{
+		left: -900px;
+	}
+}
+@-moz-keyframes roll{
+	0% {
+		left: 0px;
+	}
+	25% {
+		left: -300px;
+	}
+	75%{
+		left: -600px;
+	}
+	100%{
+		left: -900px;
+	}
+}
+@-o-keyframes roll{
+	0% {
+		left: 0px;
+	}
+	25% {
+		left: -300px;
+	}
+	75%{
+		left: -600px;
+	}
+	100%{
+		left: -900px;
+	}
+}
+@keyframes roll{
+	0% {
+		left: 0px;
+	}
+	25% {
+		left: -300px;
+	}
+	75%{
+		left: -600px;
+	}
+	100%{
+		left: -900px;
+	}
+}*/
+
+
+/*css3的(ele~ele选择器):获取某元素后面的兄弟元素*/
+#tab1:target~ul.tab-panel,
+#tab2:target~ul.tab-panel,
+#tab3:target~ul.tab-panel{
+	-webkit-transition: left 0.5s ease-in-out;
+	-o-transition: left 0.5s ease-in-out;
+	transition: left 0.5s ease-in-out;
+}
+#tab1:target~ul.tab-panel{
+	left: 0;
+}
+#tab2:target~ul.tab-panel{
+	left: -300px;
+}
+#tab3:target~ul.tab-panel{
+	left: -600px;
+}
+
+/*选择a元素href属性以“#tab”开头的元素*/
+a[href^="#tab"]{
+	position: absolute;
+	right: 70px;
+	bottom: 4px;
+	display: inline-block;
+	padding: 8px;
+	color: #fff;
+	font-weight: bold;
+	text-decoration: none;
+	background-color: #7FC07E;
+	alpha:(opacity:80);
+	opacity: 0.8;
+	z-index: 9999;
+}
+a[href^="#tab"]+a{
+	right: 40px;
+}
+a[href^="#tab"]+a+a{
+	right: 8px;
+}
