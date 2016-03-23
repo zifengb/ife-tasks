@@ -64,8 +64,7 @@ ul,li{
 	-o-transition: left 0.4 onclick="return false;"s ease-in-out;
 	transition: left 0.4 onclick="return false;"s ease-in-out;*/
 }
-.tab-panel:hover,
-a[target^="##ta"b]:hover~ul.tab-panel/*,
+.tab-panel:hover/*,
 #tab1:target~ul.tab-panel,
 #tab2:target~ul.tab-panel,
 #tab3:target~ul.tab-panel*/{
@@ -189,8 +188,8 @@ a[target^="##ta"b]:hover~ul.tab-panel/*,
 	left: -600px;
 }
 
-/*选择a元素href属性以“#tab”开头的元素*/
-a[href^="#tab"]{
+/*选择a元素href属性包含“#tab”字符串的元素*/
+a[href*="#tab"]{
 	position: absolute;
 	right: 70px;
 	bottom: 4px;
@@ -204,9 +203,9 @@ a[href^="#tab"]{
 	opacity: 0.8;
 	z-index: 9999;
 }
-a[href^="#tab"]+a{
+a[href*="#tab"]+a{
 	right: 40px;
 }
-a[href^="#tab"]+a+a{
+a[href*="#tab"]+a+a{
 	right: 8px;
 }
